@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40365661BCF816A00B658ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365651BCF816A00B658ED /* main.m */; };
+		B40365691BCF816A00B658ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365681BCF816A00B658ED /* AppDelegate.m */; };
+		B403656C1BCF816A00B658ED /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B403656B1BCF816A00B658ED /* FirstViewController.m */; };
+		B403656F1BCF816A00B658ED /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B403656E1BCF816A00B658ED /* SecondViewController.m */; };
+		B40365721BCF816A00B658ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40365701BCF816A00B658ED /* Main.storyboard */; };
+		B40365741BCF816A00B658ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40365731BCF816A00B658ED /* Images.xcassets */; };
+		B40365771BCF816A00B658ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40365751BCF816A00B658ED /* LaunchScreen.xib */; };
+		B40365831BCF816B00B658ED /* Meal_ShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365821BCF816B00B658ED /* Meal_ShareTests.m */; };
+		B403658E1BCF82E300B658ED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B403658D1BCF82E300B658ED /* LoginViewController.m */; };
+		B40365A41BCFA24000B658ED /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40365A11BCFA24000B658ED /* FBSDKCoreKit.framework */; };
+		B40365A51BCFA24000B658ED /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40365A21BCFA24000B658ED /* FBSDKLoginKit.framework */; };
+		B40365A61BCFA24000B658ED /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40365A31BCFA24000B658ED /* FBSDKShareKit.framework */; };
+		B40365A91BD3167600B658ED /* signUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365A81BD3167600B658ED /* signUpViewController.m */; };
+		B40365B11BD6FCF400B658ED /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B01BD6FCF400B658ED /* Meal.m */; };
+		B40365B41BD70D9A00B658ED /* Meals.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B31BD70D9A00B658ED /* Meals.m */; };
+		B40365B71BD86B1600B658ED /* PostCuisineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B61BD86B1600B658ED /* PostCuisineViewController.m */; };
+		B40365BA1BDDB83F00B658ED /* RequestOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */; };
+		B40365C21BE45E2F00B658ED /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B40365C11BE45E2F00B658ED /* cameraButton.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B403657D1BCF816B00B658ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B40365581BCF816A00B658ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B403655F1BCF816A00B658ED;
+			remoteInfo = "Meal-Share";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B40365601BCF816A00B658ED /* Meal-Share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal-Share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40365641BCF816A00B658ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40365651BCF816A00B658ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B40365671BCF816A00B658ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B40365681BCF816A00B658ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B403656A1BCF816A00B658ED /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		B403656B1BCF816A00B658ED /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B403656D1BCF816A00B658ED /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B403656E1BCF816A00B658ED /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B40365711BCF816A00B658ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B40365731BCF816A00B658ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B40365761BCF816A00B658ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B403657C1BCF816B00B658ED /* Meal-ShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal-ShareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40365811BCF816B00B658ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40365821BCF816B00B658ED /* Meal_ShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal_ShareTests.m; sourceTree = "<group>"; };
+		B403658C1BCF82E300B658ED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B403658D1BCF82E300B658ED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B403659F1BCFA04600B658ED /* Meal-Share-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meal-Share-Prefix.pch"; sourceTree = "<group>"; };
+		B40365A11BCFA24000B658ED /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-20150813/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		B40365A21BCFA24000B658ED /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-20150813/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		B40365A31BCFA24000B658ED /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-20150813/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		B40365A71BD3167600B658ED /* signUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signUpViewController.h; sourceTree = "<group>"; };
+		B40365A81BD3167600B658ED /* signUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpViewController.m; sourceTree = "<group>"; };
+		B40365AF1BD6FCF400B658ED /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		B40365B01BD6FCF400B658ED /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		B40365B21BD70D9A00B658ED /* Meals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meals.h; sourceTree = "<group>"; };
+		B40365B31BD70D9A00B658ED /* Meals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meals.m; sourceTree = "<group>"; };
+		B40365B51BD86B1600B658ED /* PostCuisineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCuisineViewController.h; sourceTree = "<group>"; };
+		B40365B61BD86B1600B658ED /* PostCuisineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCuisineViewController.m; sourceTree = "<group>"; };
+		B40365B81BDDB83F00B658ED /* RequestOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestOrderViewController.h; sourceTree = "<group>"; };
+		B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestOrderViewController.m; sourceTree = "<group>"; };
+		B40365C11BE45E2F00B658ED /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraButton.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B403655D1BCF816A00B658ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40365A51BCFA24000B658ED /* FBSDKLoginKit.framework in Frameworks */,
+				B40365A41BCFA24000B658ED /* FBSDKCoreKit.framework in Frameworks */,
+				B40365A61BCFA24000B658ED /* FBSDKShareKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40365791BCF816B00B658ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40365571BCF816A00B658ED = {
+			isa = PBXGroup;
+			children = (
+				B403659F1BCFA04600B658ED /* Meal-Share-Prefix.pch */,
+				B40365621BCF816A00B658ED /* Meal-Share */,
+				B403657F1BCF816B00B658ED /* Meal-ShareTests */,
+				B40365611BCF816A00B658ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B40365611BCF816A00B658ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B40365601BCF816A00B658ED /* Meal-Share.app */,
+				B403657C1BCF816B00B658ED /* Meal-ShareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B40365621BCF816A00B658ED /* Meal-Share */ = {
+			isa = PBXGroup;
+			children = (
+				B40365A01BCFA21C00B658ED /* Frameworks */,
+				B40365671BCF816A00B658ED /* AppDelegate.h */,
+				B40365681BCF816A00B658ED /* AppDelegate.m */,
+				B403656A1BCF816A00B658ED /* FirstViewController.h */,
+				B403656B1BCF816A00B658ED /* FirstViewController.m */,
+				B403656D1BCF816A00B658ED /* SecondViewController.h */,
+				B403656E1BCF816A00B658ED /* SecondViewController.m */,
+				B40365B51BD86B1600B658ED /* PostCuisineViewController.h */,
+				B40365B61BD86B1600B658ED /* PostCuisineViewController.m */,
+				B40365B81BDDB83F00B658ED /* RequestOrderViewController.h */,
+				B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */,
+				B403658F1BCF82F700B658ED /* Login */,
+				B40365AA1BD6FA9E00B658ED /* model */,
+				B40365701BCF816A00B658ED /* Main.storyboard */,
+				B40365731BCF816A00B658ED /* Images.xcassets */,
+				B40365751BCF816A00B658ED /* LaunchScreen.xib */,
+				B40365631BCF816A00B658ED /* Supporting Files */,
+			);
+			path = "Meal-Share";
+			sourceTree = "<group>";
+		};
+		B40365631BCF816A00B658ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B40365C11BE45E2F00B658ED /* cameraButton.png */,
+				B40365641BCF816A00B658ED /* Info.plist */,
+				B40365651BCF816A00B658ED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B403657F1BCF816B00B658ED /* Meal-ShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				B40365821BCF816B00B658ED /* Meal_ShareTests.m */,
+				B40365801BCF816B00B658ED /* Supporting Files */,
+			);
+			path = "Meal-ShareTests";
+			sourceTree = "<group>";
+		};
+		B40365801BCF816B00B658ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B40365811BCF816B00B658ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B403658F1BCF82F700B658ED /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B403658C1BCF82E300B658ED /* LoginViewController.h */,
+				B403658D1BCF82E300B658ED /* LoginViewController.m */,
+				B40365A71BD3167600B658ED /* signUpViewController.h */,
+				B40365A81BD3167600B658ED /* signUpViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B40365A01BCFA21C00B658ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B40365A11BCFA24000B658ED /* FBSDKCoreKit.framework */,
+				B40365A21BCFA24000B658ED /* FBSDKLoginKit.framework */,
+				B40365A31BCFA24000B658ED /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B40365AA1BD6FA9E00B658ED /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B40365AF1BD6FCF400B658ED /* Meal.h */,
+				B40365B01BD6FCF400B658ED /* Meal.m */,
+				B40365B21BD70D9A00B658ED /* Meals.h */,
+				B40365B31BD70D9A00B658ED /* Meals.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B403655F1BCF816A00B658ED /* Meal-Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40365861BCF816B00B658ED /* Build configuration list for PBXNativeTarget "Meal-Share" */;
+			buildPhases = (
+				B403655C1BCF816A00B658ED /* Sources */,
+				B403655D1BCF816A00B658ED /* Frameworks */,
+				B403655E1BCF816A00B658ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meal-Share";
+			productName = "Meal-Share";
+			productReference = B40365601BCF816A00B658ED /* Meal-Share.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B403657B1BCF816B00B658ED /* Meal-ShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40365891BCF816B00B658ED /* Build configuration list for PBXNativeTarget "Meal-ShareTests" */;
+			buildPhases = (
+				B40365781BCF816B00B658ED /* Sources */,
+				B40365791BCF816B00B658ED /* Frameworks */,
+				B403657A1BCF816B00B658ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B403657E1BCF816B00B658ED /* PBXTargetDependency */,
+			);
+			name = "Meal-ShareTests";
+			productName = "Meal-ShareTests";
+			productReference = B403657C1BCF816B00B658ED /* Meal-ShareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B40365581BCF816A00B658ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = SJSU;
+				TargetAttributes = {
+					B403655F1BCF816A00B658ED = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B403657B1BCF816B00B658ED = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = B403655F1BCF816A00B658ED;
+					};
+				};
+			};
+			buildConfigurationList = B403655B1BCF816A00B658ED /* Build configuration list for PBXProject "Meal-Share" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B40365571BCF816A00B658ED;
+			productRefGroup = B40365611BCF816A00B658ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B403655F1BCF816A00B658ED /* Meal-Share */,
+				B403657B1BCF816B00B658ED /* Meal-ShareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B403655E1BCF816A00B658ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40365721BCF816A00B658ED /* Main.storyboard in Resources */,
+				B40365771BCF816A00B658ED /* LaunchScreen.xib in Resources */,
+				B40365C21BE45E2F00B658ED /* cameraButton.png in Resources */,
+				B40365741BCF816A00B658ED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B403657A1BCF816B00B658ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B403655C1BCF816A00B658ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40365A91BD3167600B658ED /* signUpViewController.m in Sources */,
+				B40365BA1BDDB83F00B658ED /* RequestOrderViewController.m in Sources */,
+				B403656F1BCF816A00B658ED /* SecondViewController.m in Sources */,
+				B40365B71BD86B1600B658ED /* PostCuisineViewController.m in Sources */,
+				B40365691BCF816A00B658ED /* AppDelegate.m in Sources */,
+				B403656C1BCF816A00B658ED /* FirstViewController.m in Sources */,
+				B40365B41BD70D9A00B658ED /* Meals.m in Sources */,
+				B40365B11BD6FCF400B658ED /* Meal.m in Sources */,
+				B40365661BCF816A00B658ED /* main.m in Sources */,
+				B403658E1BCF82E300B658ED /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40365781BCF816B00B658ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40365831BCF816B00B658ED /* Meal_ShareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B403657E1BCF816B00B658ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B403655F1BCF816A00B658ED /* Meal-Share */;
+			targetProxy = B403657D1BCF816B00B658ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B40365701BCF816A00B658ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B40365711BCF816A00B658ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B40365751BCF816A00B658ED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B40365761BCF816A00B658ED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B40365841BCF816B00B658ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B40365851BCF816B00B658ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B40365871BCF816B00B658ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/manavpavitrasingh/Downloads/FacebookSDKs-iOS-20151007",
+					"/Users/manavpavitrasingh/Downloads/FacebookSDKs-iOS-20150813",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Meal-Share-Prefix.pch";
+				INFOPLIST_FILE = "Meal-Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B40365881BCF816B00B658ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/manavpavitrasingh/Downloads/FacebookSDKs-iOS-20151007",
+					"/Users/manavpavitrasingh/Downloads/FacebookSDKs-iOS-20150813",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Meal-Share-Prefix.pch";
+				INFOPLIST_FILE = "Meal-Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B403658A1BCF816B00B658ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Meal-ShareTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meal-Share.app/Meal-Share";
+			};
+			name = Debug;
+		};
+		B403658B1BCF816B00B658ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Meal-ShareTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meal-Share.app/Meal-Share";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B403655B1BCF816A00B658ED /* Build configuration list for PBXProject "Meal-Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40365841BCF816B00B658ED /* Debug */,
+				B40365851BCF816B00B658ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40365861BCF816B00B658ED /* Build configuration list for PBXNativeTarget "Meal-Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40365871BCF816B00B658ED /* Debug */,
+				B40365881BCF816B00B658ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40365891BCF816B00B658ED /* Build configuration list for PBXNativeTarget "Meal-ShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B403658A1BCF816B00B658ED /* Debug */,
+				B403658B1BCF816B00B658ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B40365581BCF816A00B658ED /* Project object */;
+}
