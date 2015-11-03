@@ -80,31 +80,17 @@
 
 
     //Zoomed or scrolled image if picker.editing = YES;
-    UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
-    // Original Image
-    UIImage *OriginalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-        self.cuisineImage.image = OriginalImage;
-            self.picture = editedImage;
-    // You can directly use this image but in case you want to store it some where
-    NSString *docDirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filePath =  [docDirPath stringByAppendingPathComponent:@"myImage.png"];
-    NSLog (@"File Path = %@", filePath);
-    
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (!image) image =  [info objectForKey:UIImagePickerControllerOriginalImage];
+        self.cuisineImage.image = image;
+            self.picture = image;
+
     // Get PNG data from following method
-    NSData *myData =     UIImagePNGRepresentation(OriginalImage);
+    NSData *myData =     UIImagePNGRepresentation(image);
     //NSLog(@"data: %@", myData);
    // NSString *str = [[NSString alloc] initWithData:myData encoding:NSUTF32StringEncoding];
 NSString *str =    [myData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     NSLog(@"string: %@",str);
-
-
-    
-    // It is better to get JPEG data because jpeg data will store the location and other related information of image.
-    [myData writeToFile:filePath atomically:YES];
-    
-    // Now you can use filePath as path of your image. For retrieving the image back from the path
-    UIImage *imageFromFile = [UIImage imageWithContentsOfFile:filePath];
-    NSLog(@"image: %@",imageFromFile);
 
 }
 #pragma mark- bool options
