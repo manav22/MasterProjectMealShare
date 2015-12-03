@@ -1,7 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var elasticsearch = require('elasticsearch');
 var mealsSchema = require('../MongoModels/meals.js');
+
+var client = new elasticsearch.Client({
+	host: 'localhost:9200'
+});
 
 /*GET all meals*/
 router.get('/', function(req, res){
@@ -50,6 +55,8 @@ router.get('/:param', function(req, res){
 
 /*POST a single meal*/
 router.post('/', function(req,res){
+	console.log(req.body);
+	console.log(req.params);
 	var meal = {
 		title: req.body.title,
 		seller: req.body.seller,
@@ -125,6 +132,22 @@ router.delete('/:MId', function(req, res){
 			res.send(err);
 			return;
 		}
+
+		client.delete(
+			{
+				index: 'mealshare',
+				type: 'meals',
+				id: String(req.params.MId)
+			},
+			function(err, res){
+				if(err){
+					console.log('es delete error:\n'+err);
+					return;
+				}
+				console.log(res);
+			}
+		);
+
 		res.json({"removed-meal":req.params.MId});
 	});
 });

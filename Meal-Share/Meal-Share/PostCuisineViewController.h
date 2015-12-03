@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
 @interface PostCuisineViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *mealTitleTextField;
@@ -18,11 +18,16 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *cuisineImage;
 - (IBAction)cameraButtonPressed:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UITableView *autoCompleteTableView;
+
+- (IBAction)isVegan:(UISwitch *)sender;
+- (IBAction)isGlutenFree:(UISwitch *)sender;
 
 - (IBAction)vegetarianSwitch:(UISwitch *)sender;
 - (IBAction)eatHereSwitch:(UISwitch *)sender;
 - (IBAction)postBarButtonItem:(UIBarButtonItem *)sender;
 - (IBAction)togoSwitch:(UISwitch *)sender;
+- (IBAction)isDelivery:(UISwitch *)sender;
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *availableUntilDatePicker;
 

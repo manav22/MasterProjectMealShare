@@ -12,6 +12,8 @@
 #import "Meal.h"
 #import "RequestOrderViewController.h"
 
+
+
 @interface FirstViewController () <MealModelDelegate>
 @property (strong, nonatomic) Meals *meals;
 
@@ -25,8 +27,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-
- 
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -70,7 +71,8 @@
     Meal *meal = self.meals.objects[indexPath.row];
     
     cell.textLabel.text = meal.mealTitle;
-   // cell.detailTextLabel.text = meal.mealAddress;
+    cell.imageView.image = meal.mealImage;
+    cell.detailTextLabel.text = meal.mealAddress;
     
     return cell;
     
@@ -95,6 +97,8 @@
     }
     
 }
+
+
 
 
 

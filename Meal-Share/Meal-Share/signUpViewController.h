@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface signUpViewController : UIViewController
+
+
+@interface signUpViewController : UIViewController 
 @property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
@@ -16,5 +18,8 @@
 
 - (IBAction)signUpButtonPressed:(UIButton *)sender;
 - (IBAction)cancelButtonPressed:(UIButton *)sender;
+
+
+
 
 @end

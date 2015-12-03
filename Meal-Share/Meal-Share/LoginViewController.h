@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KeychainItemWrapper.h"
 
 @interface LoginViewController : UIViewController
 //@property (strong, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
@@ -18,5 +19,14 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 - (IBAction)signUpBarButtonItemPressed:(UIBarButtonItem *)sender;
+
+@property (strong, nonatomic) NSString* token;
+@property (strong, nonatomic) NSString* isCreditCard;
+
+@property (strong, nonatomic)KeychainItemWrapper* keyChainItem;
+
+-(NSString *)getToken;
+-(NSString *)ccFlag;
+-(void)saveTokens:(NSDictionary *)responseDictionary;
 
 @end

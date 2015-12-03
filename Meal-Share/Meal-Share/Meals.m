@@ -8,8 +8,13 @@
 
 #import "Meals.h"
 #import "Meal.h"
-static NSString* const mBaseURL = @"http://localhost:8000/";
-static NSString* const mMeals = @"api/meals";
+#import "PostCuisineViewController.h"
+#import "LoginViewController.h"
+#import "KeychainItemWrapper.h"
+#import <AFNetworking/AFNetworking.h>
+static NSString* const mBaseURL = @"http://mealshare-aslimaye90.c9users.io";
+static NSString* const mMeals = @"/api/meals";
+static NSString* const mMealImage =@"/getimage";
 
 @interface Meals ()
 
@@ -40,12 +45,36 @@ static NSString* const mMeals = @"api/meals";
     NSURLSessionDataTask* dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
         if (error == nil) {
             NSArray* responseArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL]; //6
-            NSLog(@"%@",responseArray);
+            NSLog(@"Response : %@",responseArray);
             [self parseAndAddMeals:responseArray toArray:self.objects]; //7
+        }
+        else{
+            NSLog(@"Error: %@",response);
         }
     }];
     
     [dataTask resume]; //8
+    
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager GET:@"http:/172.16.0.5:8080/getimage" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//    
+//    NSURL *URL = [NSURL URLWithString:@"http:/172.16.0.5:8080/getimage"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+//    
+//    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        } else {
+//            NSLog(@"Response: %@ %@", response, responseObject);
+//        }
+//    }];
+//    [dataTask resume];
     
 }
 
@@ -57,8 +86,9 @@ static NSString* const mMeals = @"api/meals";
         NSLog(@"meal: %@", meal.mealTitle);
         [destinationArray addObject:meal];
         NSLog(@"Objects: %@", destinationArray[0]);
-        if (meal.imageId) { //1
-            [self loadImage:meal];
+        if (meal.imageID) { //1
+            NSLog(@"meal.image: %@", meal.imageID );
+            [self loadImage:meal.imageID andMeal:meal];
         }
     }
     
@@ -89,56 +119,66 @@ static NSString* const mMeals = @"api/meals";
 //    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
 //    request.HTTPMethod = isExistingMeal ? @"PUT" : @"POST"; //2
     
-    NSURL* url = [NSURL URLWithString:meals];
-
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
-    request.HTTPMethod = @"POST";
+//    NSURL* url = [NSURL URLWithString:meals];
+//
+//    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+//    request.HTTPMethod = @"POST";
+    NSLog(@"%@", meals);
     
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    NSData* data = [NSJSONSerialization dataWithJSONObject:[meal toDictionary] options:0 error:NULL]; //3
+    [manager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
+     KeychainItemWrapper* keyChainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"com.ios.StoryBoards.Meal-Share" accessGroup:nil];
+        NSData *tokenData = [keyChainItem objectForKey:(__bridge id)(kSecValueData)];
+    NSString *token = [[NSString alloc] initWithData:tokenData encoding:NSUTF8StringEncoding];
+    NSLog(@"Meals class: %@", token);
+        [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",token] forHTTPHeaderField:@"bearer"];
     
-    request.HTTPBody = data;
-    
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; //4
-    
-    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
-    
-    NSURLSessionDataTask* dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
-        if (!error) {
-            NSArray* responseArray = @[[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL]];
-            [self parseAndAddMeals:responseArray toArray:self.objects];
-        }
+  
+    NSDictionary *parameters = [meal toDictionary];
+    NSLog(@"%@",[parameters objectForKey:@"imagePath"]);
+    NSURL *filePath = [NSURL fileURLWithPath:[parameters objectForKey:@"imagePath"]];
+    [manager POST:meals parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileURL:filePath name:@"image" error:nil];
+        NSLog(@"Dictionary: %@", parameters);
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
     }];
-    [dataTask resume];
+    
+
 }
 
-- (void) saveNewMealImageFirst:(Meal*)meal
-{
-    NSURL* url = [NSURL URLWithString:[mBaseURL stringByAppendingPathComponent:mMeals]]; //1
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
-    request.HTTPMethod = @"POST"; //2
-    [request addValue:@"image/png" forHTTPHeaderField:@"Content-Type"]; //3
-    
-    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
-    
-    NSData* bytes = UIImagePNGRepresentation(meal.image); //4
-    NSURLSessionUploadTask* task = [session uploadTaskWithRequest:request fromData:bytes completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
-        if (error == nil && [(NSHTTPURLResponse*)response statusCode] < 300) {
-            NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-            meal.imageId = responseDict[@"_id"]; //6
-            [self persist:meal]; //7
-        }
-    }];
-    [task resume];
-}
+//- (void) saveNewMealImageFirst:(Meal*)meal
+//{
+//    NSURL* url = [NSURL URLWithString:[mBaseURL stringByAppendingPathComponent:mMeals]]; //1
+//    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+//    request.HTTPMethod = @"POST"; //2
+//    [request addValue:@"image/png" forHTTPHeaderField:@"Content-Type"]; //3
+//    
+//    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
+//    
+//    NSData* bytes = UIImagePNGRepresentation(meal.image); //4
+//    NSURLSessionUploadTask* task = [session uploadTaskWithRequest:request fromData:bytes completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
+//        if (error == nil && [(NSHTTPURLResponse*)response statusCode] < 300) {
+//            NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+//            meal.imageId = responseDict[@"_id"]; //6
+//            [self persist:meal]; //7
+//        }
+//    }];
+//    [task resume];
+//}
 
-- (void)loadImage:(Meal*)meal
+- (void)loadImage:(NSString*)imageId andMeal:(Meal*)meal
 {
-    NSURL* url = [NSURL URLWithString:[[mBaseURL stringByAppendingPathComponent:mMeals] stringByAppendingPathComponent:meal.imageId]]; //1
-    
+    NSString* image = [mBaseURL stringByAppendingPathComponent:mMealImage];
+   
+    NSURL* url = [NSURL URLWithString:[image stringByAppendingPathComponent:imageId]]; //1
+     NSLog(@"url: %@",url);
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
     
@@ -149,7 +189,16 @@ static NSString* const mMeals = @"api/meals";
             if (!image) {
                 NSLog(@"unable to build image");
             }
-            meal.image = image;
+            else
+            {
+                
+                meal.mealImage = image;
+                NSLog(@"mealImage:%@",meal.mealImage);
+                
+            }
+            NSLog(@"image is here %@", image);
+            
+            
             if (self.delegate) {
                 [self.delegate modelUpdated];
             }

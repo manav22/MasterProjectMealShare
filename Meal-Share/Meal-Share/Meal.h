@@ -18,15 +18,28 @@
 @property (nonatomic, strong) NSString* mealAddress;
 @property (nonatomic, strong) NSString* mealDescription;
 @property (nonatomic, strong) NSString* mealId;
+@property (nonatomic, strong) NSString* imagePath;
+
+@property (nonatomic, strong) NSString* price;
 //@property (nonatomic, retain, readonly) NSMutableArray* categories;
 
 /** This property starts out YES until modified manually or loaded from the network. This way dragging the pin will update the coordinates and geocoded info */
 //@property (nonatomic) BOOL configuredBySystem;
-//
-@property (nonatomic, strong) UIImage* image;
-@property (nonatomic, strong) NSString* imageId;
+////
 
+@property (nonatomic, strong) NSString* imageID;
 
+@property (nonatomic, strong) UIImage* mealImage;
+
+@property (nonatomic, strong) NSString* mealVegan;
+@property (nonatomic, strong) NSString* mealVegetarian;
+@property (nonatomic, strong) NSString* mealGlutenFree;
+
+@property (nonatomic, strong) NSString* mealEatHere;
+@property (nonatomic, strong) NSString* mealToGo;
+@property (nonatomic, strong) NSString* mealDelivery;
+
+@property (nonatomic, strong) NSString* token;
 #pragma mark - JSON-ification
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;

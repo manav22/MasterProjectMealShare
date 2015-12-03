@@ -1,7 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var elasticsearch = require('elasticsearch');
 var personSchema = require('../MongoModels/persons.js');
+
+var client = new elasticsearch.Client({
+	host: 'localhost:9200'
+});
 
 /*GET all persons*/
 router.get('/', function(req, res){
@@ -50,13 +55,6 @@ router.get('/:param', function(req, res){
 
 /*POST a single person*/
 router.post('/', function(req,res){
-	if( !req.body.userName ||
-		!req.body.password ||
-		!req.body.email ||
-		!req.body.firstName ||
-		!req.body.lastName){
-			res.json({"insufficient": "data"});
-		}
 	var person = {
 		userName: req.body.userName,
 		email: req.body.email,
@@ -138,6 +136,22 @@ router.delete('/:PId', function(req, res){
 			res.send(err);
 			return;
 		}
+
+		client.delete(
+			{
+				index: 'mealshare',
+				type: 'persons',
+				id: String(req.params.PId)
+			},
+			function(err, res){
+				if(err){
+					console.log('es delete error:\n'+err);
+					return;
+				}
+				console.log(res);
+			}
+		);
+
 		res.json({"removed": req.params.PId});
 	});
 });

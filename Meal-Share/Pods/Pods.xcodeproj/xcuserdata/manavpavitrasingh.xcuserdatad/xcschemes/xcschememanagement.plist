@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HNKGooglePlacesAutocomplete.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HNKServerFacade.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Mantle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>512DA79859DD00F2F0A9ED0064F9A7C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61CCA3CCC4530A2E78EF3086E8A0A420</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE530D2B04F5F428E3C1E698EC268DE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1E5E331E348E9BAB0B38E8052FC81D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

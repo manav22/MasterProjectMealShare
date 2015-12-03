@@ -19,12 +19,13 @@
        [self.navigationController setNavigationBarHidden:NO animated:YES];
     // Do any additional setup after loading the view.
     self.mealTitleLabel.text = self.selectedMeal.mealTitle;
-   // self.mealAddresslabel.text = self.selectedMeal.mealAddress;
-    self.priceLabel.text = @"$3";
-    //self.numberOfPersonsLabel.text = self.selectedMeal.mealAvailableSpots;
-    //self.mealDescriptionLabel.text = self.selectedMeal.mealDescription;
-    //self.mealEndDateLabel.text = self.selectedMeal.mealEndDateTime;
+    self.mealAddresslabel.text = self.selectedMeal.mealAddress;
     
+    self.priceLabel.text = [NSString stringWithFormat:@"%@", self.selectedMeal.price];
+    self.numberOfPersonsLabel.text = [NSString stringWithFormat:@"%@",self.selectedMeal.mealAvailableSpots];
+    self.mealDescriptionLabel.text = self.selectedMeal.mealDescription;
+    self.mealEndDateLabel.text = [NSString stringWithFormat:@"%@",self.selectedMeal.mealEndDateTime];
+    self.cuisineImageView.image = self.selectedMeal.mealImage;
     
 }
 

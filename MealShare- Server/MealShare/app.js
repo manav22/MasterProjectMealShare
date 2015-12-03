@@ -14,12 +14,25 @@ var apiPersonContactNumbers = require('./routes/personArrayRoutes/apiPersonConta
 var apiMealCuisines = require('./routes/mealArrayRoutes/apiMealCuisines');
 var apiMealFoodItems = require('./routes/mealArrayRoutes/apiMealFoodItems');
 var apiMealAddress = require('./routes/mealArrayRoutes/apiMealAddress');
+var apiSearch = require('./routes/apiSearch');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// Fix for Any Origin HTTP Calls
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type,Accept,x-access-token');
+    if(req.method == 'OPTIONS'){
+      res.status(200).end();
+    } else {
+    next();
+    }
+}
 
 //MongoDB connection
 mongoose.connect('mongodb://localhost/MealShare', function(err) {
@@ -38,6 +51,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, 'uploads')));
+
+// Fix for Any Origin HTTP Calls
+app.use(allowCrossDomain);
 
 //default routes
 app.use('/', routes);
@@ -50,6 +68,8 @@ app.use('/api/meals/address', apiMealAddress);
 //person routes
 app.use('/api/persons', apiPersons);
 app.use('/api/persons/contactNumbers', apiPersonContactNumbers);
+//search route
+app.use('/api/search', apiSearch);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

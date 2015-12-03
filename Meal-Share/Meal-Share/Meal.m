@@ -8,6 +8,7 @@
 
 #import "Meal.h"
 
+
 #define safeSet(d,k,v) if (v) d[k] = v;
 
 @implementation Meal
@@ -34,9 +35,19 @@
         _mealStartDateTime = dictionary[@"startDateTime"];
         _mealEndDateTime = dictionary[@"endDateTime"];
         _mealAddress = dictionary[@"mealAddress"];
-        _mealDescription = dictionary[@"foodItems"];
+        _mealDescription = dictionary[@"description"];
         _mealId = dictionary[@"_id"];
-        _imageId = dictionary[@"imageId"];
+        _imagePath = dictionary[@"imagePath"];
+        _imageID = dictionary[@"imageID"];
+        _price = dictionary[@"price"];
+
+        _mealEatHere = dictionary[@"isEatHere"];
+        _mealToGo    = dictionary[@"isToGo"];
+        _mealVegan   = dictionary[@"isVegan"];
+        _mealGlutenFree = dictionary[@"isGlutenFree"];
+        _mealVegetarian = dictionary[@"isVegetarian"];
+      
+        NSLog(@"in the parse dictionary");
       //  _categories = [NSMutableArray arrayWithArray:dictionary[@"categories"]];
     }
     return self;
@@ -44,6 +55,9 @@
 
 - (NSDictionary*) toDictionary
 {
+
+
+
     NSMutableDictionary* jsonable = [NSMutableDictionary dictionary];
     safeSet(jsonable, @"title", self.mealTitle);
     safeSet(jsonable, @"seller", self.mealSeller);
@@ -51,19 +65,23 @@
     safeSet(jsonable, @"startDateTime", self.mealStartDateTime);
     safeSet(jsonable, @"endDateTime", self.mealEndDateTime);
     safeSet(jsonable, @"mealAddress", self.mealAddress);
-    safeSet(jsonable, @"foodItems", self.mealDescription);
-    safeSet(jsonable, @"_id", self.mealId);
-//
-//    NSData* data = UIImagePNGRepresentation(self.image);
-//    NSString* newStr = [NSString stringWithUTF8String:[data bytes]];
-//
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"cameraButton" ofType:@"png"];
+    safeSet(jsonable, @"description", self.mealDescription);
+   // safeSet(jsonable, @"_id", self.mealId);
+    safeSet(jsonable, @"imagePath", self.imagePath);
+        safeSet(jsonable, @"price", self.price);
+    
+    safeSet(jsonable, @"isEatHere", self.mealEatHere);
+    safeSet(jsonable, @"isToGo", self.mealToGo);
+    safeSet(jsonable, @"isVegan", self.mealVegan);
+    safeSet(jsonable, @"isGlutenFree", self.mealGlutenFree);
+    safeSet(jsonable, @"isVegetarian", self.mealVegetarian);
 
-    safeSet(jsonable, @"imageId", self.imageId);
-   // safeSet(jsonable, @"categories", self.categories);
+    
 
     return jsonable;
 }
+
+
 
 
 @end

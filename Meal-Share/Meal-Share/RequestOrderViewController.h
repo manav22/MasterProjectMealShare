@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *numberOfPersonsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *mealDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *mealEndDateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *cuisineImageView;
 
 @property (strong, nonatomic) Meal *selectedMeal;
 @end

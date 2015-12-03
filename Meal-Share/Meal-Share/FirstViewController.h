@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 

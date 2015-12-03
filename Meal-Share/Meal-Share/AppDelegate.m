@@ -7,15 +7,29 @@
 //
 
 #import "AppDelegate.h"
+#import "HNKGooglePlacesAutocompleteQuery.h"
+
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+
+
 + (AppDelegate *)appDelegate
 {
     return [UIApplication sharedApplication].delegate;
+}
+
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+   
+   [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:@"AIzaSyDkd1MGM0ouvlwB7Milp8D-0aM8hF8Zs8k"];
+    
+    return YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -23,6 +37,7 @@
     [self.meals import];
     //return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   //  didFinishLaunchingWithOptions:launchOptions];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

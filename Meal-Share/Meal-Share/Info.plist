@@ -18,8 +18,21 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb428882383963842</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>428882383963842</string>
+	<key>FacebookDisplayName</key>
+	<string>Meal-Share</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -46,18 +59,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb428882383963842</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>428882383963842</string>
-    <key>FacebookDisplayName</key>
-    <string>Meal-Share</string>
 </dict>
 </plist>

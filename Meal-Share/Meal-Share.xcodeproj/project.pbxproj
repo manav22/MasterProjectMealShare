@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AAD282A98E1699CD2CE27F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC1F6CACA4EA03E442F6A4F /* libPods.a */; };
 		B40365661BCF816A00B658ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365651BCF816A00B658ED /* main.m */; };
 		B40365691BCF816A00B658ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365681BCF816A00B658ED /* AppDelegate.m */; };
 		B403656C1BCF816A00B658ED /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B403656B1BCF816A00B658ED /* FirstViewController.m */; };
-		B403656F1BCF816A00B658ED /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B403656E1BCF816A00B658ED /* SecondViewController.m */; };
-		B40365721BCF816A00B658ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40365701BCF816A00B658ED /* Main.storyboard */; };
 		B40365741BCF816A00B658ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40365731BCF816A00B658ED /* Images.xcassets */; };
 		B40365771BCF816A00B658ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40365751BCF816A00B658ED /* LaunchScreen.xib */; };
 		B40365831BCF816B00B658ED /* Meal_ShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365821BCF816B00B658ED /* Meal_ShareTests.m */; };
@@ -25,6 +24,20 @@
 		B40365B71BD86B1600B658ED /* PostCuisineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B61BD86B1600B658ED /* PostCuisineViewController.m */; };
 		B40365BA1BDDB83F00B658ED /* RequestOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */; };
 		B40365C21BE45E2F00B658ED /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B40365C11BE45E2F00B658ED /* cameraButton.png */; };
+		B42482221BFA93B50035F387 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B42482211BFA93B50035F387 /* menu-icon.png */; };
+		B42482281BFEAA0D0035F387 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42482271BFEAA0D0035F387 /* SettingsViewController.m */; };
+		B424822A1BFEB0E50035F387 /* Shopping Basket-25.png in Resources */ = {isa = PBXBuildFile; fileRef = B42482291BFEB0E50035F387 /* Shopping Basket-25.png */; };
+		B45F60F21BFA7DEA00479C7C /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45F60F11BFA7DEA00479C7C /* ModalViewController.m */; };
+		B45F60F41BFA7F2C00479C7C /* behind_modal.png in Resources */ = {isa = PBXBuildFile; fileRef = B45F60F31BFA7F2C00479C7C /* behind_modal.png */; };
+		B45F60F71BFA8BB700479C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45F60F51BFA8BB700479C7C /* Main.storyboard */; };
+		B49FD9F91BFEB69600F7D89D /* Settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = B49FD9F81BFEB69600F7D89D /* Settings-25.png */; };
+		B49FD9FC1BFEB73400F7D89D /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FD9FB1BFEB73400F7D89D /* UpdateProfileViewController.m */; };
+		B49FD9FE1C0406E000F7D89D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49FD9FD1C0406E000F7D89D /* Security.framework */; };
+		B4AE559D1BF57FC500BC520C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AE559C1BF57FC500BC520C /* Person.m */; };
+		B4F16A641C041A26006CAE94 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F16A631C041A26006CAE94 /* KeychainItemWrapper.m */; };
+		B4F16A661C056B33006CAE94 /* edit.ico in Resources */ = {isa = PBXBuildFile; fileRef = B4F16A651C056B33006CAE94 /* edit.ico */; };
+		B4F16A681C085F73006CAE94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F16A671C085F73006CAE94 /* CoreLocation.framework */; };
+		B4F16A781C0863C8006CAE94 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F16A771C0863C8006CAE94 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A55982F3D416D183A622703 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6938F3177F5441F5E15A63A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6DC1F6CACA4EA03E442F6A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40365601BCF816A00B658ED /* Meal-Share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal-Share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40365641BCF816A00B658ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40365651BCF816A00B658ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,9 +61,6 @@
 		B40365681BCF816A00B658ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B403656A1BCF816A00B658ED /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B403656B1BCF816A00B658ED /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B403656D1BCF816A00B658ED /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B403656E1BCF816A00B658ED /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		B40365711BCF816A00B658ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B40365731BCF816A00B658ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B40365761BCF816A00B658ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B403657C1BCF816B00B658ED /* Meal-ShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal-ShareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +83,25 @@
 		B40365B81BDDB83F00B658ED /* RequestOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestOrderViewController.h; sourceTree = "<group>"; };
 		B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestOrderViewController.m; sourceTree = "<group>"; };
 		B40365C11BE45E2F00B658ED /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraButton.png; sourceTree = "<group>"; };
+		B42482211BFA93B50035F387 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		B42482261BFEAA0D0035F387 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B42482271BFEAA0D0035F387 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B42482291BFEB0E50035F387 /* Shopping Basket-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Basket-25.png"; sourceTree = "<group>"; };
+		B45F60F01BFA7DEA00479C7C /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		B45F60F11BFA7DEA00479C7C /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		B45F60F31BFA7F2C00479C7C /* behind_modal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behind_modal.png; sourceTree = "<group>"; };
+		B45F60F61BFA8BB700479C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B49FD9F81BFEB69600F7D89D /* Settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-25.png"; sourceTree = "<group>"; };
+		B49FD9FA1BFEB73400F7D89D /* UpdateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
+		B49FD9FB1BFEB73400F7D89D /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
+		B49FD9FD1C0406E000F7D89D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B4AE559B1BF57FC500BC520C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		B4AE559C1BF57FC500BC520C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B4F16A621C041A26006CAE94 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = "Meal-Share/KeychainItemWrapper.h"; sourceTree = "<group>"; };
+		B4F16A631C041A26006CAE94 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = "Meal-Share/KeychainItemWrapper.m"; sourceTree = "<group>"; };
+		B4F16A651C056B33006CAE94 /* edit.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = edit.ico; sourceTree = "<group>"; };
+		B4F16A671C085F73006CAE94 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B4F16A771C0863C8006CAE94 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +109,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F16A781C0863C8006CAE94 /* MapKit.framework in Frameworks */,
+				B4F16A681C085F73006CAE94 /* CoreLocation.framework in Frameworks */,
+				B49FD9FE1C0406E000F7D89D /* Security.framework in Frameworks */,
 				B40365A51BCFA24000B658ED /* FBSDKLoginKit.framework in Frameworks */,
 				B40365A41BCFA24000B658ED /* FBSDKCoreKit.framework in Frameworks */,
 				B40365A61BCFA24000B658ED /* FBSDKShareKit.framework in Frameworks */,
+				3AAD282A98E1699CD2CE27F2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +129,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E9A3BFA6DFD96AAFD8B3CC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6938F3177F5441F5E15A63A2 /* Pods.debug.xcconfig */,
+				0A55982F3D416D183A622703 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D2CF16F54474FF72A039B37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4F16A771C0863C8006CAE94 /* MapKit.framework */,
+				B4F16A671C085F73006CAE94 /* CoreLocation.framework */,
+				B49FD9FD1C0406E000F7D89D /* Security.framework */,
+				6DC1F6CACA4EA03E442F6A4F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B40365571BCF816A00B658ED = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +156,8 @@
 				B40365621BCF816A00B658ED /* Meal-Share */,
 				B403657F1BCF816B00B658ED /* Meal-ShareTests */,
 				B40365611BCF816A00B658ED /* Products */,
+				2E9A3BFA6DFD96AAFD8B3CC0 /* Pods */,
+				6D2CF16F54474FF72A039B37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,20 +173,26 @@
 		B40365621BCF816A00B658ED /* Meal-Share */ = {
 			isa = PBXGroup;
 			children = (
+				B4F16A6A1C086018006CAE94 /* SPGooglePlacesAutoComplete */,
 				B40365A01BCFA21C00B658ED /* Frameworks */,
 				B40365671BCF816A00B658ED /* AppDelegate.h */,
 				B40365681BCF816A00B658ED /* AppDelegate.m */,
 				B403656A1BCF816A00B658ED /* FirstViewController.h */,
 				B403656B1BCF816A00B658ED /* FirstViewController.m */,
-				B403656D1BCF816A00B658ED /* SecondViewController.h */,
-				B403656E1BCF816A00B658ED /* SecondViewController.m */,
 				B40365B51BD86B1600B658ED /* PostCuisineViewController.h */,
 				B40365B61BD86B1600B658ED /* PostCuisineViewController.m */,
+				B45F60F01BFA7DEA00479C7C /* ModalViewController.h */,
+				B45F60F11BFA7DEA00479C7C /* ModalViewController.m */,
 				B40365B81BDDB83F00B658ED /* RequestOrderViewController.h */,
 				B40365B91BDDB83F00B658ED /* RequestOrderViewController.m */,
+				B45F60F51BFA8BB700479C7C /* Main.storyboard */,
+				B49FD9FA1BFEB73400F7D89D /* UpdateProfileViewController.h */,
+				B49FD9FB1BFEB73400F7D89D /* UpdateProfileViewController.m */,
+				B42482261BFEAA0D0035F387 /* SettingsViewController.h */,
+				B42482271BFEAA0D0035F387 /* SettingsViewController.m */,
 				B403658F1BCF82F700B658ED /* Login */,
 				B40365AA1BD6FA9E00B658ED /* model */,
-				B40365701BCF816A00B658ED /* Main.storyboard */,
+				B4F16A691C085F93006CAE94 /* KeychainItemWrapper */,
 				B40365731BCF816A00B658ED /* Images.xcassets */,
 				B40365751BCF816A00B658ED /* LaunchScreen.xib */,
 				B40365631BCF816A00B658ED /* Supporting Files */,
@@ -139,7 +203,12 @@
 		B40365631BCF816A00B658ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B42482291BFEB0E50035F387 /* Shopping Basket-25.png */,
+				B49FD9F81BFEB69600F7D89D /* Settings-25.png */,
+				B42482211BFA93B50035F387 /* menu-icon.png */,
+				B4F16A651C056B33006CAE94 /* edit.ico */,
 				B40365C11BE45E2F00B658ED /* cameraButton.png */,
+				B45F60F31BFA7F2C00479C7C /* behind_modal.png */,
 				B40365641BCF816A00B658ED /* Info.plist */,
 				B40365651BCF816A00B658ED /* main.m */,
 			);
@@ -191,8 +260,27 @@
 				B40365B01BD6FCF400B658ED /* Meal.m */,
 				B40365B21BD70D9A00B658ED /* Meals.h */,
 				B40365B31BD70D9A00B658ED /* Meals.m */,
+				B4AE559B1BF57FC500BC520C /* Person.h */,
+				B4AE559C1BF57FC500BC520C /* Person.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		B4F16A691C085F93006CAE94 /* KeychainItemWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				B4F16A621C041A26006CAE94 /* KeychainItemWrapper.h */,
+				B4F16A631C041A26006CAE94 /* KeychainItemWrapper.m */,
+			);
+			name = KeychainItemWrapper;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B4F16A6A1C086018006CAE94 /* SPGooglePlacesAutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SPGooglePlacesAutoComplete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B40365861BCF816B00B658ED /* Build configuration list for PBXNativeTarget "Meal-Share" */;
 			buildPhases = (
+				54B15528DCA6718240E4BB5B /* Check Pods Manifest.lock */,
 				B403655C1BCF816A00B658ED /* Sources */,
 				B403655D1BCF816A00B658ED /* Frameworks */,
 				B403655E1BCF816A00B658ED /* Resources */,
+				09B8A2165239B38BDB9F9C7A /* Copy Pods Resources */,
+				AF735D96761FF9BBEE04B0D8 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,10 +366,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40365721BCF816A00B658ED /* Main.storyboard in Resources */,
 				B40365771BCF816A00B658ED /* LaunchScreen.xib in Resources */,
+				B42482221BFA93B50035F387 /* menu-icon.png in Resources */,
+				B45F60F71BFA8BB700479C7C /* Main.storyboard in Resources */,
 				B40365C21BE45E2F00B658ED /* cameraButton.png in Resources */,
 				B40365741BCF816A00B658ED /* Images.xcassets in Resources */,
+				B424822A1BFEB0E50035F387 /* Shopping Basket-25.png in Resources */,
+				B45F60F41BFA7F2C00479C7C /* behind_modal.png in Resources */,
+				B49FD9F91BFEB69600F7D89D /* Settings-25.png in Resources */,
+				B4F16A661C056B33006CAE94 /* edit.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +387,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09B8A2165239B38BDB9F9C7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54B15528DCA6718240E4BB5B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF735D96761FF9BBEE04B0D8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B403655C1BCF816A00B658ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -298,9 +442,13 @@
 			files = (
 				B40365A91BD3167600B658ED /* signUpViewController.m in Sources */,
 				B40365BA1BDDB83F00B658ED /* RequestOrderViewController.m in Sources */,
-				B403656F1BCF816A00B658ED /* SecondViewController.m in Sources */,
+				B4AE559D1BF57FC500BC520C /* Person.m in Sources */,
+				B42482281BFEAA0D0035F387 /* SettingsViewController.m in Sources */,
+				B49FD9FC1BFEB73400F7D89D /* UpdateProfileViewController.m in Sources */,
 				B40365B71BD86B1600B658ED /* PostCuisineViewController.m in Sources */,
+				B4F16A641C041A26006CAE94 /* KeychainItemWrapper.m in Sources */,
 				B40365691BCF816A00B658ED /* AppDelegate.m in Sources */,
+				B45F60F21BFA7DEA00479C7C /* ModalViewController.m in Sources */,
 				B403656C1BCF816A00B658ED /* FirstViewController.m in Sources */,
 				B40365B41BD70D9A00B658ED /* Meals.m in Sources */,
 				B40365B11BD6FCF400B658ED /* Meal.m in Sources */,
@@ -328,20 +476,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B40365701BCF816A00B658ED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B40365711BCF816A00B658ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B40365751BCF816A00B658ED /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B40365761BCF816A00B658ED /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B45F60F51BFA8BB700479C7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45F60F61BFA8BB700479C7C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,6 +573,7 @@
 		};
 		B40365871BCF816B00B658ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6938F3177F5441F5E15A63A2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -436,11 +585,13 @@
 				INFOPLIST_FILE = "Meal-Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B40365881BCF816B00B658ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A55982F3D416D183A622703 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -452,6 +603,7 @@
 				INFOPLIST_FILE = "Meal-Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
